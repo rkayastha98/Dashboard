@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.mainScreenController">
+   <GridPane prefHeight="730.0" prefWidth="1288.0">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints maxHeight="355.0" minHeight="10.0" prefHeight="159.0" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="571.0" minHeight="10.0" prefHeight="571.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <AnchorPane prefHeight="176.0" prefWidth="1288.0" style="-fx-background-color: #4A062B;">
+         <Label alignment="CENTER" layoutX="386.0" layoutY="37.0" prefHeight="65.0" prefWidth="515.0" style="-fx-text-fill: white;" text="MyForethought">
+            <font>
+               <Font name="Brush Script MT Italic" size="63.0" />
+            </font>
+         </Label>
+         <ImageView fx:id="loginBtn" fitHeight="52.0" fitWidth="53.0" layoutX="1229.0" layoutY="85.0" onMouseClicked="#HandleLoginBtn">
+            <Image url="@../../Images/login-xl.png" />
+         </ImageView>
+      </AnchorPane>
+      <AnchorPane prefHeight="598.0" prefWidth="1288.0" style="-fx-background-color: white;" GridPane.rowIndex="1">
+         <AnchorPane fx:id="weatherBox" layoutX="61.0" layoutY="62.0" prefHeight="455.0" prefWidth="361.0" style="-fx-background-color: white;">
+            <effect>
+               <InnerShadow height="34.34" radius="16.98" width="35.58" />
+            </effect>
+            <Label alignment="CENTER" layoutX="106.0" layoutY="40.0" prefHeight="43.0" prefWidth="152.0" text="Weather" textFill="#111111">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="weather" layoutX="51.0" layoutY="93.0" prefHeight="57.0" prefWidth="266.0">
+               <ImageView fitHeight="56.0" fitWidth="60.0">
+                  <Image url="@../../Images/icons8-sun-48.png" />
+               </ImageView>
+               <Label layoutX="58.0" layoutY="10.0" prefHeight="36.0" prefWidth="122.0" style="-fx-text-fill: black; -fx-font-size: 22;" text="40 degrees" />
+               <Label layoutX="196.0" layoutY="11.0" prefHeight="36.0" prefWidth="70.0" style="-fx-text-fill: black; -fx-font-size: 22;" text="15:40" />
+            </AnchorPane>
+         </AnchorPane>
+         <AnchorPane layoutX="486.0" layoutY="-1.0" prefHeight="605.0" prefWidth="822.0" style="-fx-background-color: white;">
+            <effect>
+               <InnerShadow height="34.34" radius="16.98" width="35.58" />
+            </effect>
+            <ScrollPane layoutX="13.0" layoutY="9.0" prefHeight="567.0" prefWidth="783.0">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <FlowPane prefHeight="573.0" prefWidth="766.0">
+                  <AnchorPane fx:id="article1" onMouseClicked="#HandleArticle" prefHeight="228.0" prefWidth="768.0" style="-fx-background-color: white;">
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                     <effect>
+                        <InnerShadow choke="0.07" height="17.79" radius="3.9475" width="0.0" />
+                     </effect>
+                     <Label layoutX="253.0" layoutY="31.0" prefHeight="50.0" prefWidth="155.0" text="Articles" />
+                  </AnchorPane>
+                  <AnchorPane fx:id="article2" layoutX="10.0" layoutY="10.0" onMouseClicked="#HandleArticle" prefHeight="228.0" prefWidth="768.0" style="-fx-background-color: white;">
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                     <effect>
+                        <InnerShadow choke="0.07" height="17.79" radius="3.9475" width="0.0" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="article3" layoutX="10.0" layoutY="238.0" onMouseClicked="#HandleArticle" prefHeight="228.0" prefWidth="768.0" style="-fx-background-color: white;">
+                     <effect>
+                        <InnerShadow choke="0.07" height="17.79" radius="3.9475" width="0.0" />
+                     </effect>
+                  </AnchorPane>
+               </FlowPane>
+            </ScrollPane>
+         </AnchorPane>
+      </AnchorPane>
+   </GridPane>
+</AnchorPane>
